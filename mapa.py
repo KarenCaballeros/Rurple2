@@ -8,8 +8,8 @@ class Mapa(object):
 	def agregar_robot(self, robot):
 		self.robot = robot
 
-	def agregar_modenas(self, monedas):	
-		self.monedas = monedas
+	def agregar_moneda(self, monedas):	
+		self.monedas.append(monedas)
 
 	def dibujar(self):
 		resultado = ""
@@ -22,6 +22,17 @@ class Mapa(object):
 			else:
 				resultado += " "
 
-	def restar_monedas():
+	def contar_monedas(self, x, y):
+		cont = 0
+		for moneda in self.monedas:
+			if moneda.x == x and moneda.y == y:
+				cont+= 1
+		return cont
+	
+	def modificar_monedas(self, x , y):
+		
+
+
+
 					
 
