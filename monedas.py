@@ -3,4 +3,4 @@ class Monedas(object):
 		self.x = x #j
 		self.y = y #i
 
-	def c	
+		

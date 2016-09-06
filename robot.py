@@ -9,14 +9,15 @@ class Robot(object):
 	def agregar_mapa(mapa):
 		self.mapa = mapa	
 
-	def sumar_monedas(monedas):
-		self.monedas = monedas
-
 	def dibujar(self):
-		for i in range(mapa.altura):
-			for j in range(mapa.ancho):
-				if j == y and i == x:
-					return 
+		if self.direccion == "UP":
+			return "^" 
+		elif self.direccion == "RIGHT":
+			return ">"
+		elif self.direccion == "DOWN":
+			return "v"
+		else:
+			return "<"	
 
 	def rotar(self):
 		if self.direccion == "UP":
@@ -27,6 +28,11 @@ class Robot(object):
 			self.direccion == "LEFT"
 		else:
 			self.direccion = "UP"
+
+	def recoger(self):
+		if self.mapa.contar_monedas(self.x , self.y) > 0:
+			self.monedas += 1
+			self.mapa.restar_monedas(x , y)
 
 	def mover(self):
 		if self.direccion == "UP":

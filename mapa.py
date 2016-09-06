@@ -28,8 +28,19 @@ class Mapa(object):
 			if moneda.x == x and moneda.y == y:
 				cont+= 1
 		return cont
+
+	def restar_monedas(self , x , y):
+		si_hay_monedas = -1
+		for i in range(len(self.monedas)):
+		moneda = self.monedas[i]
+		if moneda.x == x and moneda.y == y:
+			si_hay_monedas = i
+			break 
+
+		if si_hay_monedas >= 0:
+			self.monedas.pop(si_hay_monedas)
 	
-	def modificar_monedas(self, x , y):
+	
 		
 
 
