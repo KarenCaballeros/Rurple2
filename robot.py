@@ -6,7 +6,7 @@ class Robot(object):
 		self.monedas = []
 		self.mapa = None
 
-	def agregar_mapa(mapa):
+	def agregar_mapa(self, mapa):
 		self.mapa = mapa	
 
 	def dibujar(self):
@@ -48,19 +48,10 @@ class Robot(object):
 			self.x = 0
 		elif self.y <= 0:
 			self.y = 0
-		elif self.x >= ancho:
-			self.x = ancho
-		elif self.y >= altura:
-			self.y = altura			 	
+		elif self.x >= self.mapa.largo:
+			self.x = self.mapa.largo - 1 
+		elif self.y >= self.mapa.alto:
+			self.y = self.mapa.alto - 1
 
-
-	def recoger(self):		
-		if self.x == self.monedas.x and self.y == self.monedas.y:
-			self.monedas +=1
-			break
-
-
-	def sumar_monedas(self):
-		if self.monedas		
 
 			

@@ -1,5 +1,5 @@
 
-def cargar_mapa(nombre_txt_mapa):	
+def cargar_mapa(nombre_mapa):	
 	mapa = open(nombre_mapa , "r")
 	lista = []
 	for i in mapa:
@@ -9,7 +9,7 @@ def cargar_mapa(nombre_txt_mapa):
 			 
 
 
-def cargar_instrucciones(nombre_txt_instrucciones):
+def cargar_instrucciones(nombre_instrucciones):
 	instrucciones = open(nombre_instrucciones, "r")
 	lista = []
 	for i in instrucciones:
