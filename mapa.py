@@ -4,6 +4,7 @@ class Mapa(object):
 		self.alto = alto
 		self.monedas = []
 		self.robot = None
+		self.contador = 0
 
 	def agregar_robot(self, robot):
 		self.robot = robot
@@ -13,23 +14,36 @@ class Mapa(object):
 
 	def dibujar(self):
 		resultado = ""
+		#resultado += ("_" * self.largo)
 		for i in range(self.alto):
 			for j in range(self.largo):
 				if j == self.robot.x and i == self.robot.y:
 					resultado += self.robot.dibujar()
-				#elif self.contar_monedas_en(j , i) > 0:
-					#resultado += self.contar_monedas_en(j, i)
+				elif self.contar_monedas(j , i) > 0:
+					resultado += str(self.contar_monedas(j, i))
 				else:
 					resultado += " "
-			resultado += "\n"		
+			resultado +=  "\n" 
+		resultado += ("_" * self.largo)			
 		return resultado			
 
-	def contar_monedas_en(self, x, y):
-		contador_monedas = 0
-		for moneda in self.monedas:
-			if moneda.x == x and moneda.y == y:
-				contador_monedas += 1
-		return contador_monedas
+	def contar_monedas(self, x, y):
+		cont = 0
+		lista_monedas = self.monedas
+		while (x , y) in lista_monedas:
+			cont += 1
+			lista_monedas.pop((x, y))
+		return cont	
+
+
+
+	#	contador_monedas = 0
+	#	for moneda in self.monedas:
+	#		if moneda.x == x and moneda.y == y:
+	#			if 
+	#			contador_monedas += 1
+	#	return contador_monedas		
+
 
 	def restar_monedas(self , x , y):
 		si_hay_monedas = -1
@@ -42,6 +56,11 @@ class Mapa(object):
 		if si_hay_monedas >= 0:
 			self.monedas.pop(si_hay_monedas)
 	
+	def monedas_en_mapa(self):
+		contador = 0
+		for moneda in self.monedas:
+			contador += 1
+		return contador	
 	
 		
 

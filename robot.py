@@ -3,7 +3,7 @@ class Robot(object):
 		self.x = x #j
 		self.y = y #i
 		self.direccion = "UP"
-		self.monedas = []
+		self.monedas = 0
 		self.mapa = None
 
 	def agregar_mapa(self, mapa):
@@ -32,17 +32,17 @@ class Robot(object):
 	def recoger(self):
 		if self.mapa.contar_monedas(self.x , self.y) > 0:
 			self.monedas += 1
-			self.mapa.restar_monedas(x , y)
+			self.mapa.restar_monedas(self.x , self.y)	
 
 	def mover(self):
 		if self.direccion == "UP":
-			self.x -= 1
-		elif self.direccion == "RIGHT":
-			self.y += 1
-		elif self.direccion == "DOWN":
-			self.x += 1
-		else:
 			self.y -= 1
+		elif self.direccion == "RIGHT":
+			self.x += 1
+		elif self.direccion == "DOWN":
+			self.y += 1
+		else:
+			self.x -= 1
 		
 		if self.x <= 0:
 			self.x = 0
