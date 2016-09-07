@@ -4,3 +4,4 @@ class Monedas(object):
 		self.y = y #i
 
 		
+		

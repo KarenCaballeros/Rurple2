@@ -16,7 +16,7 @@ class Robot(object):
 			return ">"
 		elif self.direccion == "DOWN":
 			return "v"
-		else:
+		elif self.direccion == "LEFT":
 			return "<"	
 
 	def rotar(self):
@@ -26,7 +26,7 @@ class Robot(object):
 			self.direccion = "DOWN"
 		elif self.direccion == "DOWN":
 			self.direccion == "LEFT"
-		else:
+		elif self.direccion == "LEFT":
 			self.direccion = "UP"
 
 	def recoger(self):
