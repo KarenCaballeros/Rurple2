@@ -23,7 +23,7 @@ for i in range(len(lista_mapa)):
 			for i in range(int(lista_mapa[i][j])):
 				objeto_moneda = Monedas(j , i)
 				objeto_mapa.agregar_moneda(objeto_moneda)
-				#print(objeto_mapa.contar_monedas(j , i))
+				print(objeto_mapa.contar_monedas(j , i))
 
 print(objeto_mapa.dibujar())
 

@@ -28,21 +28,19 @@ class Mapa(object):
 		return resultado			
 
 	def contar_monedas(self, x, y):
-		cont = 0
-		lista_monedas = self.monedas
-		while (x , y) in lista_monedas:
-			cont += 1
-			lista_monedas.pop((x, y))
-		return cont	
+		contador_monedas = 0
+		for moneda in self.monedas:
+			if moneda.x == x and moneda.y == y: 
+				contador_monedas += 1
+		return contador_monedas	
 
-
-
-	#	contador_monedas = 0
-	#	for moneda in self.monedas:
-	#		if moneda.x == x and moneda.y == y:
-	#			if 
-	#			contador_monedas += 1
-	#	return contador_monedas		
+		#cont = 0
+		#lista_monedas = self.monedas
+		#for i in lista_monedas:
+		#	while i.x == x and i.y == y:
+		#		cont += 1
+		#		lista_monedas.pop(i)
+		#return cont	
 
 
 	def restar_monedas(self , x , y):
