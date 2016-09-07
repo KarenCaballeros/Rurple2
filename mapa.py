@@ -14,7 +14,7 @@ class Mapa(object):
 
 	def dibujar(self):
 		resultado = ""
-		#resultado += ("_" * self.largo)
+		resultado += ("_" * self.largo) + "\n"
 		for i in range(self.alto):
 			for j in range(self.largo):
 				if j == self.robot.x and i == self.robot.y:
@@ -23,16 +23,16 @@ class Mapa(object):
 					resultado += str(self.contar_monedas(j, i))
 				else:
 					resultado += " "
-			resultado +=  "\n" 
+			resultado += "!" + "\n" 
 		resultado += ("_" * self.largo)			
 		return resultado			
 
 	def contar_monedas(self, x, y):
-		contador_monedas = 0
-		for moneda in self.monedas:
+		contador = 0
+		for moneda in self.monedas:	
 			if moneda.x == x and moneda.y == y: 
-				contador_monedas += 1
-		return contador_monedas	
+				contador += 1
+		return contador		
 
 		#cont = 0
 		#lista_monedas = self.monedas
