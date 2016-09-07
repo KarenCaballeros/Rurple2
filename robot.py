@@ -25,7 +25,7 @@ class Robot(object):
 		elif self.direccion == "RIGHT":
 			self.direccion = "DOWN"
 		elif self.direccion == "DOWN":
-			self.direccion == "LEFT"
+			self.direccion = "LEFT"
 		elif self.direccion == "LEFT":
 			self.direccion = "UP"
 

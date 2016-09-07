@@ -11,7 +11,7 @@ lista_instrucciones = utilidades.cargar_instrucciones(nombre_instrucciones)
 #print(lista_mapa)
 #print(lista_instrucciones)
 
-objeto_mapa = Mapa((len(lista_mapa[0])) , (len(lista_mapa)) )
+objeto_mapa = Mapa((len(lista_mapa[0])) , (len(lista_mapa))) 
 
 for i in range(len(lista_mapa)):
 	for j in range(len(lista_mapa[0])):

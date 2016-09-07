@@ -16,10 +16,10 @@ class Mapa(object):
 		resultado += ("_" * self.largo) + "\n"
 		for i in range(self.alto):
 			for j in range(self.largo):
-				if i == self.robot.y and j == self.robot.x:
-					resultado += self.robot.dibujar()
-				elif self.contar_monedas(j , i) > 0:
+				if self.contar_monedas(j , i) > 0:
 					resultado += str(self.contar_monedas(j, i))	
+				elif i == self.robot.y and j == self.robot.x:
+					resultado += self.robot.dibujar()
 				else:
 					resultado += " "
 			resultado += "!" "\n" 
@@ -32,7 +32,6 @@ class Mapa(object):
 			if m.x == x and m.y == y: 
 				cont += 1
 		return cont	
-
 
 		#contador = 0
 		#for i in range(len(self.monedas)):
