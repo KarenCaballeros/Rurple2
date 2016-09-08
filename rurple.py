@@ -47,5 +47,3 @@ for i in lista_instrucciones:
 	
 	print (objeto_mapa.dibujar())								
 	time.sleep(0.05)
-
-
