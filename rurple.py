@@ -40,11 +40,10 @@ for i in lista_instrucciones:
 	else:
 		objeto_robot.recoger()
 
-print("Monedas en el mapa: " , objeto_mapa.monedas_en_mapa())
-print("Tus monedas: " , objeto_robot.monedas)
-print("")		
+	print("Monedas en el mapa: " , objeto_mapa.monedas_en_mapa())
+	print("Tus monedas: " , objeto_robot.monedas)
+	print("")		
 
-print (objeto_mapa.dibujar())								
-time.sleep(2)
-
-
+	
+	print (objeto_mapa.dibujar())								
+	time.sleep(0.05)

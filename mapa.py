@@ -65,10 +65,3 @@ class Mapa(object):
 		for moneda in self.monedas:
 			contador += 1
 		return contador	
-	
-		
-
-
-
-					
-
