@@ -33,27 +33,6 @@ class Mapa(object):
 				cont += 1
 		return cont	
 
-		#contador = 0
-		#for i in range(len(self.monedas)):
-		#	if self.monedas[i].x == x and self.monedas[i].y == y:
-		#		contador += 1
-		#return contador		 
-
-		#contador = 0
-		#for moneda in self.monedas:	
-		#	if moneda.x == x and moneda.y == y: 
-		#		contador += 1
-		#return contador		
-
-		#cont = 0
-		#lista_monedas = self.monedas
-		#for i in range(len(self.monedas)):
-		#	while if self.monedas[i].x == x and self.monedas[i].y == y::
-		#		lista_monedas.pop(i)
-		#		cont += 1
-		#return cont	
-
-
 	def restar_monedas(self , x , y):
 		for i in range(len(self.monedas)):
 			if self.monedas[i].x == x and self.monedas[i].y == y:
